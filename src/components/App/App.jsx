@@ -39,9 +39,7 @@ class App extends Component {
           <FeedbackOptions options={options} increment={this.handleIncrement} />
         </Section>
         <Section title={'Statistics'}>
-          {this.state.good > 0 ||
-          this.state.neutral > 0 ||
-          this.state.neutral > 0 ? (
+          {this.countTotalFeedback() > 0 ? (
             <Statistics
               good={this.state.good}
               neutral={this.state.neutral}
