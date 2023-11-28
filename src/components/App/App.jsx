@@ -1,5 +1,5 @@
 import { Container } from 'components/App/App.styles';
-import FeedbackButtons from 'components/FeedbackButtons/FeedbackButtons';
+import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Section from 'components/Section/Section';
 import Statistics from 'components/Statistics/Statistics';
 import { Component } from 'react';
@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <Container>
         <Section title={'Please leave feedback'}>
-          <FeedbackButtons options={options} increment={this.handleIncrement} />
+          <FeedbackOptions options={options} increment={this.handleIncrement} />
         </Section>
         <Section title={'Statistics'}>
           {this.state.good > 0 ||

@@ -1,6 +1,6 @@
-import { ButtonContainer, ButtonOption } from './FeedbackButtons.styles';
+import { ButtonContainer, ButtonOption } from './FeedbackOptions.styles';
 
-const FeedbackButtons = ({ options, increment }) => {
+const FeedbackOptions = ({ options, increment }) => {
   return (
     <ButtonContainer>
       {options.map(option => (
@@ -18,4 +18,4 @@ const FeedbackButtons = ({ options, increment }) => {
   );
 };
 
-export default FeedbackButtons;
+export default FeedbackOptions;
