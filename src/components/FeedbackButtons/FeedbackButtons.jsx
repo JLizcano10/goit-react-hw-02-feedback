@@ -1,10 +1,10 @@
-import { ButtonContainer } from './FeedbackButtons.styles';
+import { ButtonContainer, ButtonOption } from './FeedbackButtons.styles';
 
 const FeedbackButtons = ({ options, increment }) => {
   return (
     <ButtonContainer>
       {options.map(option => (
-        <button
+        <ButtonOption
           key={option}
           type="button"
           onClick={() => {
@@ -12,7 +12,7 @@ const FeedbackButtons = ({ options, increment }) => {
           }}
         >
           {option}
-        </button>
+        </ButtonOption>
       ))}
     </ButtonContainer>
   );
