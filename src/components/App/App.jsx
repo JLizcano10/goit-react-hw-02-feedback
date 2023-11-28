@@ -1,5 +1,6 @@
 import { Container } from 'components/App/App.styles';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
+import Notification from 'components/Notification/Notification';
 import Section from 'components/Section/Section';
 import Statistics from 'components/Statistics/Statistics';
 import { Component } from 'react';
@@ -28,7 +29,7 @@ class App extends Component {
     if (total === 0) {
       return 0;
     }
-    return Number(positivePercentage).toFixed(1);
+    return parseInt(positivePercentage);
   };
 
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
     const totalFeedback = this.countTotalFeedback();
     return (
       <Container>
+        <Notification></Notification>
         <Section title={'Please leave feedback'}>
           <FeedbackOptions options={options} increment={this.handleIncrement} />
         </Section>
@@ -49,9 +51,7 @@ class App extends Component {
               positive={this.countPositiveFeedbackPercentage()}
             />
           ) : (
-            <h3 style={{ fontSize: '25px', fontWeight: '400' }}>
-              No feedback given
-            </h3>
+            <Notification message="No feedback given" />
           )}
         </Section>
       </Container>
