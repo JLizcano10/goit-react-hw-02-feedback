@@ -6,10 +6,9 @@ const FeedbackOptions = ({ options, increment }) => {
       {options.map(option => (
         <ButtonOption
           key={option}
+          name={option}
           type="button"
-          onClick={() => {
-            increment(option);
-          }}
+          onClick={increment}
         >
           {option}
         </ButtonOption>

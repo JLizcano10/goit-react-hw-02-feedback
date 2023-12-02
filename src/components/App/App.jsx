@@ -12,10 +12,11 @@ class App extends Component {
     bad: 0,
   };
 
-  handleIncrement = value => {
-    this.setState(prevState => {
-      return { [value]: prevState[value] + 1 };
-    });
+  handleIncrement = e => {
+    const property = e.target.name;
+    this.setState(prevState => ({
+      [property]: prevState[property] + 1,
+    }));
   };
 
   countTotalFeedback = () => {
